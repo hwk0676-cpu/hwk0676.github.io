@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.introduce {
+  margin-top: 42px;
+}
+
+.main_btn {
+  width: 298px;
+  height: 286px;
+  background-image: url(img/main_button01.png);
+  margin-top: 72px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.main_guide {
+  margin-top: 50px;
+}

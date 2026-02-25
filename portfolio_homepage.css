@@ -1,0 +1,44 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  background-color: white;
+}
+
+header > p:first-child {
+  font-weight: bold;
+}
+
+.main_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 810px;
+  line-height: 119px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section_01 > :first-child {
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+.top_bt {
+  position: fixed;
+  width: 58px;
+  height: 58px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  bottom: 60px;
+  right: 60px;
+}
