@@ -1,3 +1,16 @@
+body {
+  font-family: "pretendard", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/*header*/
 header {
   position: fixed;
   width: 100%;
@@ -6,14 +19,40 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
+  z-index: 1000;
+
   background-color: white;
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
-header > p:first-child {
-  font-weight: bold;
+header.scrolled {
+  /* 스크롤 시 적용 스타일 */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+header > a:first-child {
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.menu {
+  display: flex;
+  gap: 60px;
+  margin-right: 60px;
+}
+
+.menu > a:hover {
+  color: #6982ff; /* 마우스 올렸을 때 글자 색 */
+}
+
+/*main*/
 
 .main_box {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,24 +60,321 @@ header > p:first-child {
   font-weight: bold;
   text-align: center;
   width: 100%;
-  height: 810px;
-  line-height: 119px;
+  height: 100vh;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  line-height: 60px;
 }
 
-.section_01 > :first-child {
+.bg_video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*section_01*/
+
+.section_01 {
+  width: 100%;
+  height: 1030px;
+}
+
+.section_01 > h2 {
   text-align: center;
   font-size: 4.8rem;
   font-weight: bold;
+  padding-top: 100px;
+  margin-bottom: 30px;
 }
 
+.box01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  padding-top: 4px;
+  padding-left: 30px;
+}
+
+.introduce {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding-top: 43px;
+  padding-left: 13px;
+  line-height: 30px;
+  color: #434343;
+}
+
+.box02 {
+  display: flex;
+  flex-direction: column;
+}
+
+.item1 {
+  padding-top: 20px;
+}
+
+.item3 {
+  padding-top: 15px;
+}
+
+.item1,
+.item3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding-left: 277px;
+  line-height: 15px;
+  color: #434343;
+}
+
+.item2,
+.item4 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding-left: 277px;
+  padding-top: 35px;
+}
+
+.item5 {
+  width: 362px;
+  height: 40px;
+  margin-left: 277px;
+  margin-top: 15px;
+}
+
+/*section_02*/
+
+.section_02 {
+  width: 100%;
+  height: 1850px;
+  display: flex;
+}
+
+.box03 {
+  width: 567px;
+  height: 1943px;
+  background-color: #f6f3ef;
+}
+
+.box03 > h2 {
+  font-size: 6.4rem;
+  font-weight: bold;
+  padding-top: 211px;
+  padding-left: 51px;
+}
+
+.introduce_02 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 28px;
+  padding-top: 90px;
+  padding-left: 51px;
+}
+
+.box004 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* section02 1번째 프로젝트 */
+.box004 > div:nth-child(1) {
+  width: 751px;
+  height: 378px;
+  display: flex;
+  border-bottom: 1px solid #000;
+  margin-left: 61px;
+  padding-top: 150px;
+}
+
+.box04 {
+  width: 751px;
+  height: 283px;
+  display: flex;
+  border-bottom: 1px solid #000;
+  margin-left: 61px;
+  padding-top: 55px;
+}
+
+.section02_img1 {
+  width: 307px;
+  height: 173px;
+  margin-left: 35px;
+}
+
+.item_box {
+  margin-top: 33px;
+  margin-left: 13px;
+}
+
+.section02_item1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.section02_item2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+/* .section02_item3 {
+  padding-top: 15px;
+  font-size: 1.6rem;
+  font-weight: 300;
+} */
+
+/* section02 2번째 프로젝트 */
+
+/* box03 + box004 가로 배치 */
+.section_02 {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 왼쪽 고정 영역 */
+.box03 {
+  position: sticky;
+  top: 80px; /*헤더 높이 고려해서 조절 */
+  width: 40%; /* 적절히 조절 */
+  /* height: 100vh; */
+
+  /* height: fit-content; */
+  height: 100vh;
+}
+
+/* 오른쪽 스크롤 영역 */
+.right_box {
+  width: 60%;
+  margin-top: 50px;
+}
+.box05 {
+  width: 751px;
+  height: 283px;
+  display: flex;
+  border-bottom: 1px solid #000;
+  margin-left: 61px;
+  padding-top: 55px;
+}
+
+.section02_img2 {
+  width: 307px;
+  height: 173px;
+  margin-left: 13px;
+}
+
+.item_box02 {
+  margin-top: 33px;
+  margin-left: 35px;
+}
+
+.section02_item4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.section02_item5 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.section02_item6,
+.section02_item3 {
+  padding-top: 13px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* footer */
+.footer_box {
+  width: 100%;
+  height: 796px;
+  background-image: url(img/footer_bg.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_item1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-top: 287px;
+}
+
+.footer_item2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* 문장 통째로 올라오는 애니메이션 */
+.footer_item1,
+.footer_item2 {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.footer_item1.show,
+.footer_item2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer_item3 {
+  font-size: 8rem;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.footer_item3 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+/* 활성화되면 나타남 */
+.footer_item3 span.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer_item4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 208px;
+  width: 100%;
+  text-align: right;
+}
+
+/* top button */
 .top_bt {
   position: fixed;
-  width: 58px;
-  height: 58px;
-  background-color: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  bottom: 60px;
-  right: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-image: url(img/arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+
+  opacity: 0; /* 처음엔 안보이게 */
+  pointer-events: none; /* 클릭 방지 */
+  transition: opacity;
+}
+
+.top_bt.show {
+  opacity: 1;
+  pointer-events: auto;
 }
