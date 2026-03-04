@@ -93,13 +93,15 @@ header > a:first-child {
 
 .box01 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 1000px;
+  margin: auto;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .photo {
   padding-top: 4px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 
 .introduce {
@@ -111,9 +113,22 @@ header > a:first-child {
   color: #434343;
 }
 
-.box02 {
-  display: flex;
+/* .box002 { */
+/* display: flex;
   flex-direction: column;
+  align-items: center; */
+/* width: 1049px;
+  margin: auto;
+} */
+
+.box02 {
+  width: 1000px;
+  margin: auto;
+  /* text-align: left; */
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .item1 {
@@ -128,7 +143,7 @@ header > a:first-child {
 .item3 {
   font-size: 1.8rem;
   font-weight: 300;
-  padding-left: 277px;
+  /* padding-left: 277px; */
   line-height: 15px;
   color: #434343;
 }
@@ -137,50 +152,61 @@ header > a:first-child {
 .item4 {
   font-size: 2.4rem;
   font-weight: bold;
-  padding-left: 277px;
+  /* padding-left: 277px; */
   padding-top: 35px;
 }
 
 .item5 {
   width: 362px;
   height: 40px;
-  margin-left: 277px;
+  /* margin-left: 277px; */
   margin-top: 15px;
 }
 
 /*section_02*/
 
-.section_02 {
+/* .section_02 {
   width: 100%;
   height: 1850px;
   display: flex;
-}
+} */
 
+/* 왼쪽 고정 영역 */
 .box03 {
-  width: 567px;
-  height: 1943px;
   background-color: #f6f3ef;
+  position: sticky;
+  top: 80px; /*헤더 높이 고려해서 조절 */
+  width: 40%; /* 적절히 조절 */
+  /* height: 100vh; */
+
+  /* height: fit-content; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding-left: 50px;
 }
 
 .box03 > h2 {
   font-size: 6.4rem;
   font-weight: bold;
-  padding-top: 211px;
-  padding-left: 51px;
+  /* padding-top: 211px; */
+  /* padding-left: 51px; */
 }
 
 .introduce_02 {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 28px;
-  padding-top: 90px;
-  padding-left: 51px;
+  /* padding-top: 90px; */
+  /* padding-left: 51px; */
 }
 
-.box004 {
+/* .box004 {
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* section02 1번째 프로젝트 */
 .box004 > div:nth-child(1) {
@@ -193,24 +219,29 @@ header > a:first-child {
 }
 
 .box04 {
-  width: 751px;
-  height: 283px;
+  /* width: 751px;
+  height: 283px; */
   display: flex;
   border-bottom: 1px solid #000;
-  margin-left: 61px;
-  padding-top: 55px;
+  /* margin-left: 61px;
+  padding-top: 55px; */
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 30px;
 }
 
 .section02_img1 {
   width: 307px;
   height: 173px;
-  margin-left: 35px;
+  /* margin-left: 35px; */
+  margin-right: 20px;
 }
 
-.item_box {
+/* .item_box {
   margin-top: 33px;
   margin-left: 13px;
-}
+} */
 
 .section02_item1 {
   font-size: 1.6rem;
@@ -236,41 +267,34 @@ header > a:first-child {
   align-items: flex-start;
 }
 
-/* 왼쪽 고정 영역 */
-.box03 {
-  position: sticky;
-  top: 80px; /*헤더 높이 고려해서 조절 */
-  width: 40%; /* 적절히 조절 */
-  /* height: 100vh; */
-
-  /* height: fit-content; */
-  height: 100vh;
-}
-
 /* 오른쪽 스크롤 영역 */
 .right_box {
   width: 60%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .box05 {
-  width: 751px;
-  height: 283px;
+  /* width: 751px;
+  height: 283px; */
   display: flex;
   border-bottom: 1px solid #000;
-  margin-left: 61px;
-  padding-top: 55px;
+  /* margin-left: 61px;
+  padding-top: 55px; */
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 30px;
 }
 
 .section02_img2 {
   width: 307px;
   height: 173px;
-  margin-left: 13px;
+  margin-left: 20px;
 }
 
-.item_box02 {
+/* .item_box02 {
   margin-top: 33px;
   margin-left: 35px;
-}
+} */
 
 .section02_item4 {
   font-size: 1.6rem;
@@ -284,7 +308,7 @@ header > a:first-child {
 
 .section02_item6,
 .section02_item3 {
-  padding-top: 13px;
+  /* padding-top: 13px; */
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 22px;
@@ -293,7 +317,7 @@ header > a:first-child {
 /* footer */
 .footer_box {
   width: 100%;
-  height: 796px;
+  height: 100vh;
   background-image: url(img/footer_bg.png);
   display: flex;
   flex-direction: column;
